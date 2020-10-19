@@ -14,6 +14,12 @@ impl Clone for CommunalType {
     }
 }
 
+impl PartialEq for CommunalType {
+    fn eq(&self, other: &Self) -> bool {
+        self == other
+    }
+}
+
 // Communal struct implementations
 
 impl<'a> Copy for Communal<'a> { }

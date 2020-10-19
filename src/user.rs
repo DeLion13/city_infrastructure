@@ -1,4 +1,4 @@
-use crate::communal::Communal;
+use crate::communal::*;
 use crate::implementations::*;
 
 use std::collections::HashMap;
@@ -62,9 +62,47 @@ impl<'a> User<'a> {
                 for (key, value) in self.cart.iter() {
                     self.inventory.insert(*key, *value);
                 }
+                self.cart.clear();
+                return true;
             }
         }
         return false;
+    }
+
+    pub fn print_inventory(self: &Self) {
+        println!("\n=====================
+        \nYour balance: {}$
+        \nPaid month:", self.balance);
+        if self.inventory.len() == 0 {
+            println!("    Didn't pay yet...");
+        }
+        else {
+            for (key, value) in self.cart.iter() {
+                self.print_communal(key.communal_type, *value);
+            }
+        }
+    }
+
+    pub fn print_communal(self: &Self, tp : CommunalType, num : i32) {
+        if tp == CommunalType::ELECTRICITY {
+            println!("    Electricity: {} month", num);
+        }
+        else if tp == CommunalType::WARMING {
+            println!("    Warming: {} month", num);
+        }
+        else if tp == CommunalType::WATER {
+            println!("    Water: {} month", num);
+        }
+        else if tp == CommunalType::GAS {
+            println!("    Gas: {} month", num);
+        }
+    }
+
+    pub fn print_user_info(self: &Self) {
+        println!("=======USER=======");
+        println!("Username: {}", self.login);
+        println!("Balance:  {}", self.balance);
+        println!("==================\n");
     }
 }
 

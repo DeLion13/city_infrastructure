@@ -3,6 +3,7 @@ pub mod communal;
 pub mod menu;
 pub mod implementations;
 pub mod menu_factory;
+pub mod infrastructure;
 
 fn main() {
     let mut us = user::User::new(100, 100, "nes");
