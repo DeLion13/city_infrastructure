@@ -32,10 +32,7 @@ impl<'a> Clone for Communal<'a> {
 
 impl<'a> PartialEq for Communal<'a> {
     fn eq(&self, other: &Self) -> bool {
-
-        let s : i8 = self.communal_type as i8;
-        let o : i8 = other.communal_type as i8;
-        s == o
+        self == other
     }
 }
 

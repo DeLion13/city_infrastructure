@@ -84,16 +84,16 @@ impl<'a> User<'a> {
     }
 
     pub fn print_communal(self: &Self, tp : CommunalType, num : i32) {
-        if tp == CommunalType::ELECTRICITY {
+        if tp == CommunalType::Electricity {
             println!("    Electricity: {} month", num);
         }
-        else if tp == CommunalType::WARMING {
+        else if tp == CommunalType::Warming {
             println!("    Warming: {} month", num);
         }
-        else if tp == CommunalType::WATER {
+        else if tp == CommunalType::Water {
             println!("    Water: {} month", num);
         }
-        else if tp == CommunalType::GAS {
+        else if tp == CommunalType::Gas {
             println!("    Gas: {} month", num);
         }
     }

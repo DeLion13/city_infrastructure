@@ -11,7 +11,7 @@ pub struct Menu<'a> {
     // pub options : <Communal<'a>, i32>, // <communal, int>
     // pub inventory : HashMap<Communal<'a>, i32>, // <communal, int>
     pub options : Vec<MenuOption<'a>>,
-    pub additionalOptions : HashMap<&'a str, MenuOption<'a>>
+    pub additional_options : HashMap<&'a str, MenuOption<'a>>
 }
 
 impl<'a> Menu<'a> {

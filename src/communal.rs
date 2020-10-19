@@ -1,8 +1,8 @@
 pub enum CommunalType {
-    WATER = 1,
-    WARMING = 2,
-    GAS = 3,
-    ELECTRICITY = 4
+    Water,
+    Warming,
+    Gas,
+    Electricity
 }
 
 pub struct Communal<'a> {
