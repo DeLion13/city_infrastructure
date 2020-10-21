@@ -1,4 +1,4 @@
-use crate::communal::Communal;
+// use crate::communal::Communal;
 use std::collections::*;
 
 pub struct MenuOption<'a> {

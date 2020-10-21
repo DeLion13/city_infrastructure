@@ -7,3 +7,7 @@ pub enum EventType {
     Remove,
     Update
 }
+
+pub trait InfrastructureComponentInterface<T> {
+    fn update(self : &mut Self, index : usize);
+}
